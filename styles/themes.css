@@ -1,0 +1,32 @@
+:root.theme-dark {
+  --default-font-weight: "wght" 465;
+  --title-font-weight: "wght" 785;
+  --background-color: rgb(0, 0, 0);
+  --accent-color: rgba(0, 204, 20, 1);
+  --background-image:   repeating-linear-gradient( rgb(0, 0, 0), rgb(0, 0, 0) 2px, transparent 2px, transparent 4px), repeating-linear-gradient(90deg, rgb(0, 0, 0), rgb(0, 0, 0) 2px, transparent 2px, transparent 4px), linear-gradient(#007f0c 0.01%, #004306 100%);
+  --button-text: rgba(0, 204, 20, 1);
+  --heart-fill-color: red;
+}
+
+:root.theme-light {
+  --default-font-weight: "wght" 400;
+  --title-font-weight: "wght" 700;
+  --background-color: rgba(255, 255, 255, 1);
+  --accent-color: rgba(0, 0, 0, 1);
+  --background-image:   repeating-linear-gradient( #d3d3d3, #d3d3d3 2px, transparent 2px, transparent 4px), repeating-linear-gradient(90deg, #d3d3d3, #d3d3d3 2px, transparent 2px, transparent 4px), linear-gradient(#e7e7e7 0.01%, #1a1a1a 100%);
+  --button-text: rgba(255, 255, 255, 1);
+  --heart-fill-color: red;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --default-font-weight: "wght" 465;
+    --title-font-weight: "wght" 785;
+    --background-color: rgb(0, 0, 0);
+    --accent-color: rgba(0, 204, 20, 1);
+    --background-image:   repeating-linear-gradient( rgb(0, 0, 0), rgb(0, 0, 0) 2px, transparent 2px, transparent 4px), repeating-linear-gradient(90deg, rgb(0, 0, 0), rgb(0, 0, 0) 2px, transparent 2px, transparent 4px), linear-gradient(#007f0c 0.01%, #004306 100%);
+    --button-text: rgba(0, 204, 20, 1);
+    --heart-fill-color: red;
+  }
+
+}
