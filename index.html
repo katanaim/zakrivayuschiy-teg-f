@@ -62,9 +62,9 @@
     </header>
     <main class="main">
       <div class="main__card">
-        <h3 class="card__title">
+        <h2 class="card__title">
           Фритрек и нулевой спринт: Подготовка к работе
-        </h3>
+        </h2>
         <div class="card__image-cover">
           <img
             loading="lazy"
@@ -83,7 +83,7 @@
           Сначала это был прикол, красить буковки, делать кнопочки
         </p>
         <div class="card__like-area">
-          <button class="card__icon-button">
+          <button class="card__icon-button" type="button">
             <svg
               width="39"
               height="36"
@@ -116,7 +116,7 @@
               />
             </svg>
           </button>
-          <button class="card__like-button">
+          <button class="card__like-button button">
             <span class="button__text">Like</span>
           </button>
         </div>
@@ -141,7 +141,7 @@
         </p>
         <p class="card__text">Здесь все еще было весело и безмятежно.</p>
         <div class="card__like-area">
-          <button class="card__icon-button">
+          <button class="card__icon-button" type="button">
             <svg
               width="39"
               height="36"
@@ -174,7 +174,7 @@
               />
             </svg>
           </button>
-          <button class="card__like-button">
+          <button class="card__like-button button" type="button">
             <span class="button__text">Like</span>
           </button>
         </div>
@@ -200,7 +200,7 @@
           макетом - это уважаемо.
         </p>
         <div class="card__like-area">
-          <button class="card__icon-button">
+          <button class="card__icon-button" type="button">
             <svg
               width="39"
               height="36"
@@ -233,7 +233,7 @@
               />
             </svg>
           </button>
-          <button class="card__like-button">
+          <button class="card__like-button button" type="button">
             <span class="button__text">Like</span>
           </button>
         </div>
@@ -260,7 +260,7 @@
           Тут стало понятно, что есть вещи посерьезнее попадания в пиксели.
         </p>
         <div class="card__like-area">
-          <button class="card__icon-button">
+          <button class="card__icon-button" type="button">
             <svg
               width="39"
               height="36"
@@ -293,7 +293,7 @@
               />
             </svg>
           </button>
-          <button class="card__like-button">
+          <button class="card__like-button button" type="button">
             <span class="button__text">Like</span>
           </button>
         </div>
@@ -321,7 +321,7 @@
           по 5 раз отправляла домашки из 4 возможных попыток.
         </p>
         <div class="card__like-area">
-          <button class="card__icon-button">
+          <button class="card__icon-button" type="button">
             <svg
               width="39"
               height="36"
@@ -354,7 +354,7 @@
               />
             </svg>
           </button>
-          <button class="card__like-button">
+          <button class="card__like-button button" type="button">
             <span class="button__text">Like</span>
           </button>
         </div>
@@ -380,7 +380,7 @@
           это вот так:
         </p>
         <div class="card__like-area">
-          <button class="card__icon-button">
+          <button class="card__icon-button" type="button">
             <svg
               width="39"
               height="36"
@@ -413,7 +413,7 @@
               />
             </svg>
           </button>
-          <button class="card__like-button">
+          <button class="card__like-button button" type="button">
             <span class="button__text">Like</span>
           </button>
         </div>
@@ -437,7 +437,7 @@
         </p>
         <p class="card__text">С концентрацией помогал чат гпт.</p>
         <div class="card__like-area">
-          <button class="card__icon-button">
+          <button class="card__icon-button" type="button">
             <svg
               width="39"
               height="36"
@@ -470,7 +470,7 @@
               />
             </svg>
           </button>
-          <button class="card__like-button">
+          <button class="card__like-button button" type="button">
             <span class="button__text">Like</span>
           </button>
         </div>
@@ -496,7 +496,7 @@
         </p>
         <p class="card__text">Да, это я на фото.</p>
         <div class="card__like-area">
-          <button class="card__icon-button">
+          <button class="card__icon-button" type="button">
             <svg
               width="39"
               height="36"
@@ -529,7 +529,7 @@
               />
             </svg>
           </button>
-          <button class="card__like-button">
+          <button class="card__like-button button" type="button">
             <span class="button__text">Like</span>
           </button>
         </div>
@@ -537,14 +537,14 @@
 
       <button
         type="button"
-        class="save__button"
+        class="save__button button"
         onclick="window['dialog-id'].showModal();"
         aria-controls="dialog-id"
       >
         <svg viewBox="0 0 42 42" class="save__icon" fill="currentColor">
           <use href="./svg/floppy.svg#floppy" />
         </svg>
-        <span class="button__text">Сохранить на память</span>
+        <span class="button__text">Сохранить на&nbsp;память</span>
       </button>
       <dialog class="dialog" id="dialog-id" aria-label="dialog-id">
         <div class="dialog__notification">
@@ -556,9 +556,9 @@
         <button
           onclick="window['dialog-id'].close()"
           type="button"
-          class="dialog__button"
+          class="dialog__button button"
         >
-          ок
+          <span class="button__text">ок</span>
         </button>
       </dialog>
     </main>

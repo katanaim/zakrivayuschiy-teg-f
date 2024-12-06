@@ -2,7 +2,7 @@
 
 :root {
   --default-font: Inter-Variable, Arial;
-  --accent-font: PressStart2P-Regular, Courier;
+  --accent-font: PressStart2P, fantasy;
   --default-font-weight: "wght" 400;
   --title-font-weight: "wght" 700;
   --background-color: rgba(255, 255, 255, 1);
