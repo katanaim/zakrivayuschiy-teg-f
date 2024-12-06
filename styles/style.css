@@ -86,23 +86,23 @@
   left: 0;
   transform: scaleX(0);
   transform-origin: left;
-  transition: 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
 .theme-menu__button:focus-visible::after {
-  transition: 0.3s ease;
+  transition: transform 0.3s ease;
   transform: scaleX(1);
 }
 
 .theme-menu__button:hover {
   opacity: 60%;
-  transition: 0.3s ease;
+  transition: opacity 0.3s ease;
 }
 
 .theme-menu__button:disabled {
   opacity: 60%;
   cursor: not-allowed;
-  transition: 0.3s ease;
+  transition: opacity 0.3s ease;
 }
 
 .theme-menu__button:focus {
@@ -113,7 +113,6 @@
 .theme-menu__button:disabled:before {
   content: "▶";
   position: absolute;
-  transition: 0.3s ease;
   animation: arrow-move 0.5s ease-in-out infinite alternate;
 }
 
@@ -129,11 +128,14 @@
 .main__card {
   background-color: var(--background-color);
   border: solid 2px var(--accent-color);
-  width: 100%;
+  width: clamp(23.1875rem, 16.0352rem + 30.5164vw, 43.5rem);
+  height: clamp(47.5rem, 42.3283rem + 22.0657vw, 62.1875rem);
+  min-height: fit-content;
   max-width: 700px;
   display: flex;
   align-items: start;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .card__title {
@@ -144,18 +146,20 @@
 }
 
 .card__image {
-  max-width: 100%;
   width:100%;
-  height: auto;
-  
+  height:100%;
+  max-height: 696px;
+  object-fit: cover;
+  object-position: 50% 50%;
 }
 
 .card__image-cover {
   position: relative;
   height: auto; 
   display: block;
-  width:100%;
-  max-height: 696px;
+  height: clamp(23.1875rem, 16.0352rem + 30.5164vw, 43.5rem);
+  min-height: 371px;
+  width: clamp(23.1875rem, 16.0352rem + 30.5164vw, 43.5rem);
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -165,7 +169,7 @@
 .card__image-lable {
   position: absolute;
   top: 25px;
-  right: 25px; /* MEDIA QUERY 13px on mobile*/
+  right: 25px; 
   font-family: var(--accent-font);
   font-size: 14px;
   -webkit-text-stroke: 0.5px var(--background-color);
@@ -217,7 +221,7 @@
   width: 130px;
   height: 38px;
   padding: 0px;
-  transition: 0.3s ease;
+  transition:  transform 0.3s ease;
   position: relative;
 }
 
@@ -227,14 +231,14 @@
   font-family: var(--accent-font);
   color: var(--button-text);
   position: relative;
-  z-index: 100;
+  z-index: 5;
   mix-blend-mode: difference;
 }
 
 .card__like-button:focus {
   outline: none;
   box-shadow: 2px 2px var(--accent-color);
-  transition: 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
 .card__like-button::before {
@@ -247,7 +251,7 @@
   position: absolute;
   transform: scaleX(0);
   transform-origin: left;
-  transition: 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
 }
 
 .card__like-button:hover::before {
@@ -369,14 +373,14 @@
   position: relative;
   margin-bottom: 103px;
   border: solid 2px var(--accent-color);
-  transition: 0.3s ease;
+  transition: transform 0.3s ease;
   position: relative;
 }
 
 .save__button:focus {
   outline: none;
   box-shadow: 2px 2px var(--accent-color);
-  transition: 0.3s ease;
+  transition: transform  0.3s ease;
 }
 
 .save__button::before {
@@ -389,7 +393,7 @@
   position: absolute;
   transform: scaleX(0);
   transform-origin: left;
-  transition: 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
 }
 
 .save__button:hover::before {
@@ -397,7 +401,7 @@
 }
 
 .save__icon {
-  width: 21px; /**MEDIA QUERY SIZE**/
+  width: 21px;
   height:21px;
   color: var(--button-text);
   mix-blend-mode: difference;
@@ -407,7 +411,7 @@
 .dialog[open] {
   height: 191px;
   width: 100%;
-  max-width: 353px;/**MEDIA QUERY SIZE**/
+  max-width: 353px;
   padding: 30px;
   background-color: var(--background-color);
   border: solid 2px var(--accent-color);
@@ -432,7 +436,7 @@
 }
 
 .dialog[open] .save__icon {
-  width: 39px; /**MEDIA QUERY SIZE**/
+  width: 39px; 
   height:39px;
   fill: var(--accent-color);
 }
@@ -443,15 +447,16 @@
   font-family: var(--accent-font);
   color: var(--accent-color);
   font-variation-settings: "wght" var(--default-font-weight);
-  max-width: 234px;/**MEDIA QUERY SIZE**/
+  max-width: 234px;
   display: block;
   text-transform: uppercase;
   line-height: 150%;
 }
 
 dialog::backdrop {
-  background-color: rgb(0 0 0 / 0.3);
-  backdrop-filter: blur(7px);
+  background-color: rgba(0, 0, 0, 1);
+  opacity: 0.75;
+
 } 
 
 .dialog__button{
@@ -499,4 +504,38 @@ dialog::backdrop {
 
 .card__image-here{
   filter: brightness(130%);
+}
+
+
+@media (width <= 375px) {
+  .card__image-lable {
+    right: 13px; 
+  }
+
+  .save__icon {
+    width: 28px; 
+    height: 28px;
+  }
+
+  .dialog[open] {
+    width: 341px;
+  }
+
+  .dialog[open] .save__icon {
+    width: 39px; 
+  }
+
+  .dialog_title {
+    width: 198px;
+  }
+
+  .dialog__button{
+    max-width: 257px;
+  }
+
+  .save__button {
+    flex-direction: column;
+    min-height: 84px;
+    width: 306px;
+  }
 }
