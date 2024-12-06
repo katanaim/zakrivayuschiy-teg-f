@@ -307,10 +307,6 @@
   outline: none;
 }
 
-.button:focus {
-  outline: none;
-}
-
 .card__like-button {
   width: 130px;
   height: 38px;
