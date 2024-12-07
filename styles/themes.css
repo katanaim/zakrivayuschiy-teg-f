@@ -1,6 +1,6 @@
 :root.theme-dark {
-  --default-font-weight: "wght" 465;
-  --title-font-weight: "wght" 785;
+  --default-font-weight: 465;
+  --title-font-weight: 785;
   --background-color: rgb(0, 0, 0);
   --accent-color: rgba(0, 204, 20, 1);
   --background-image: repeating-linear-gradient(
@@ -22,8 +22,8 @@
 }
 
 :root.theme-light {
-  --default-font-weight: "wght" 400;
-  --title-font-weight: "wght" 700;
+  --default-font-weight: 400;
+  --title-font-weight: 700;
   --background-color: rgba(255, 255, 255, 1);
   --accent-color: rgba(0, 0, 0, 1);
   --background-image: repeating-linear-gradient(
@@ -46,8 +46,8 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --default-font-weight: "wght" 465;
-    --title-font-weight: "wght" 785;
+    --default-font-weight: 465;
+    --title-font-weight: 785;
     --background-color: rgb(0, 0, 0);
     --accent-color: rgba(0, 204, 20, 1);
     --background-image: repeating-linear-gradient(

@@ -204,6 +204,18 @@
   height: 38px;
   padding: 0px;
   border: solid 2px transparent;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  transition: border 0.3s ease;
+}
+
+.card__icon-button:focus {
+  outline: none;
+}
+
+.card__icon-button:focus-visible {
+  border: solid 2px var(--accent-color);
 }
 
 .sparks {
@@ -211,43 +223,43 @@
 }
 
 .core {
-  transition: fill 0.3s linear;
+  transition: fill 0.3s 0.03s linear;
   fill: var(--background-color);
 }
 
 .main-body {
-  transition: fill 0.3s 0.05s linear;
+  transition: fill 0.3s linear;
   fill: var(--background-color);
 }
 
 .heart:hover .core {
   fill: var(--accent-color);
-  transition: fill 0.3s 0.03s linear;
+  transition: fill 0.3s linear;
 }
 
 .heart:hover .main-body {
   fill: var(--accent-color);
-  transition: fill 0.3s linear;
+  transition: fill 0.3s 0.05s linear;
 }
 
 .heart:active .core {
   fill: var(--heart-fill-color);
-  transition: fill 0.3s 0.03s linear;
+  transition: fill 0.3s linear;
 }
 
 .heart:active .main-body {
   fill: var(--heart-fill-color);
-  transition: fill 0.3s linear;
+  transition: fill 0.3s 0.05s linear;
 }
 
 .like-icon.is-liked .core {
   fill: var(--heart-fill-color);
-  transition: fill 0.3s 0.03s linear;
+  transition: fill 0.3s linear;
 }
 
 .like-icon.is-liked .main-body {
   fill: var(--heart-fill-color);
-  transition: fill 0.3s linear;
+  transition: fill 0.3s 0.05s linear;
 }
 
 .contour {
@@ -343,7 +355,7 @@
   width: clamp(21.3125rem, 21.0484rem + 1.1268vw, 22.0625rem);
   display: flex;
   align-items: center;
-  justify-items: center;
+  justify-content: center;
   flex-direction: column;
   margin: 0;
 }
@@ -351,15 +363,14 @@
 .dialog[open] .dialog__notification {
   display: flex;
   align-items: center;
-  flex-direction: row;
-  min-height: 100%;
   gap: 20px;
-  max-width: 293px;
+  max-width: 100%;
+  flex-wrap: wrap;
 }
 
 .dialog[open] .save__icon {
-  width: 100%;
-  max-width: 39px;
+  flex-shrink: 0;
+  width: 39px;
   height: 39px;
   color: var(--accent-color);
 }
@@ -369,11 +380,9 @@
   font-family: var(--accent-font);
   color: var(--accent-color);
   font-variation-settings: "wght" var(--default-font-weight);
-  max-width: 234px;
-  display: block;
   text-transform: uppercase;
   line-height: 150%;
-  width: clamp(12.375rem, 11.5827rem + 3.3803vw, 14.625rem);
+  max-width: calc(100% - 59px);
 }
 
 .save__icon {
@@ -390,8 +399,8 @@
 
 .dialog__button {
   height: 38px;
-  width: clamp(16.0625rem, 15.2702rem + 3.3803vw, 18.3125rem);
-  max-width: 353px; /**MEDIA QUERY SIZE**/
+  width: 100%;
+  max-width: 293px;
   margin-top: 30px;
   text-transform: uppercase;
   display: block;
