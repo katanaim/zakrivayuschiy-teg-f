@@ -137,7 +137,7 @@
   padding: 5px 10px;
   font-size: 18px;
   line-height: 22px;
-  font-variation-settings: var(--title-font-weight);
+  font-variation-settings: "wght" var(--title-font-weight);
 }
 
 .card__image {
@@ -211,7 +211,7 @@
 }
 
 .core {
-  transition: fill 0.3s 0.03s linear;
+  transition: fill 0.3s linear;
   fill: var(--background-color);
 }
 
@@ -222,26 +222,32 @@
 
 .heart:hover .core {
   fill: var(--accent-color);
+  transition: fill 0.3s 0.03s linear;
 }
 
 .heart:hover .main-body {
   fill: var(--accent-color);
+  transition: fill 0.3s linear;
 }
 
 .heart:active .core {
   fill: var(--heart-fill-color);
+  transition: fill 0.3s 0.03s linear;
 }
 
 .heart:active .main-body {
   fill: var(--heart-fill-color);
+  transition: fill 0.3s linear;
 }
 
 .like-icon.is-liked .core {
   fill: var(--heart-fill-color);
+  transition: fill 0.3s 0.03s linear;
 }
 
 .like-icon.is-liked .main-body {
   fill: var(--heart-fill-color);
+  transition: fill 0.3s linear;
 }
 
 .contour {
@@ -251,6 +257,7 @@
 
 .like-icon.is-liked .contour {
   fill: var(--heart-fill-color);
+  transition: fill 0.1s linear;
 }
 
 .like-icon.is-liked .heart {
@@ -325,7 +332,6 @@
 }
 
 .dialog[open] {
-  min-height: 191px;
   max-width: 353px;
   padding: 30px;
   background-color: var(--background-color);
@@ -335,7 +341,6 @@
   left: 50%;
   transform: translate(-50%, -50%);
   width: clamp(21.3125rem, 21.0484rem + 1.1268vw, 22.0625rem);
-  overflow: hidden;
   display: flex;
   align-items: center;
   justify-items: center;
@@ -347,7 +352,7 @@
   display: flex;
   align-items: center;
   flex-direction: row;
-  min-height: 63px;
+  min-height: 100%;
   gap: 20px;
   max-width: 293px;
 }
@@ -397,35 +402,35 @@ dialog::backdrop {
   opacity: 0.75;
 }
 
-.card__image-baby {
+.card__image-bright-rotated {
   filter: saturate(130%) hue-rotate(40deg);
 }
 
-.card__image-lab {
+.card__image-pink {
   filter: invert(0.1) brightness(110%) saturate(90%) hue-rotate(-90deg);
 }
 
-.card__image-granny {
+.card__image-sepia {
   filter: sepia(0.5) saturate(0.7);
 }
 
-.card__image-teddy {
+.card__image-colors {
   filter: hue-rotate(20deg) brightness(1.2) saturate(1);
 }
 
-.card__image-dog {
+.card__image-pale {
   filter: hue-rotate(30deg) brightness(130%);
 }
 
-.card__image-ancient {
+.card__image-yellow {
   filter: hue-rotate(20deg) saturate(4) brightness(1) contrast(1.2);
 }
 
-.card__image-eating {
+.card__image-red {
   filter: hue-rotate(-30deg) contrast(0.4) saturate(2) blur(1.5px);
 }
 
-.card__image-here {
+.card__image-bright {
   filter: brightness(130%);
 }
 
@@ -446,5 +451,10 @@ dialog::backdrop {
     flex-direction: column;
     min-height: 84px;
     width: 306px;
+  }
+
+  .save__icon {
+    width: 28px;
+    height: 28px;
   }
 }
